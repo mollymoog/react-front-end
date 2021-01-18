@@ -8,7 +8,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`https://picsum.photos/200`)
+    fetch(`https://picsum.photos/v2/list`)
       // .then(resp => resp.json())
       .then(resp => {
         console.log(resp.url)
