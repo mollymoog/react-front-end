@@ -1,4 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import ImagesContainer from './containers/ImagesContainer'
+
 import './App.css';
 
 class App extends React.Component {
@@ -7,29 +10,18 @@ class App extends React.Component {
     url: ""
   }
 
-  componentDidMount() {
-    fetch(`https://picsum.photos/v2/list`)
-      // .then(resp => resp.json())
-      .then(resp => {
-        console.log(resp.url)
-        return(
-          this.setState({
-            url: resp.url
-          }))})
-  }
-
   render() {
     return (
-      <div>
-        App
-        <br></br>
-        <img
-          src={this.state.url}
-          alt="one"
-        />
+      <div className= "App">
+        <ImagesContainer />
       </div>
     )
   }
 }
 
-export default App;
+// const mapStateToProps = (state) => {
+
+
+// }
+
+export default connect()(App);
