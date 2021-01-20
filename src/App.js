@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ImagesContainer from './containers/ImagesContainer'
+import GameForm from './components/GameForm'
 
 import './App.css';
 
@@ -13,7 +14,8 @@ class App extends React.Component {
   render() {
     return (
       <div className= "App">
-        <ImagesContainer />
+        <GameForm />
+        {/* <ImagesContainer /> */}
       </div>
     )
   }

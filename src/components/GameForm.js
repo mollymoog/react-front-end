@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Route } from 'react-router-dom';
 import { createGame } from '../actions/createGame';
+import GameContainer from '../containers/GameContainer';
 
 class GameForm extends React.Component {
 
@@ -33,12 +35,19 @@ class GameForm extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         this.props.createGame(this.state)
+        this.setState({
+            name: '',
+            color: ''
+        })
+        // route to game on submit
+        // this.history.push('/games/new')
     }
 
     render() {
         return (
             <div>
                 GameForm
+                <Route exact path='/games/new' render={() => <GameContainer game={this.props.game}/>} />
                 <form onSubmit={this.handleSubmit}>
                     <label>Team 1:</label>
                         <input type='text' name='name' value={this.state.name} onChange={this.handleChange} placeholder='team name'></input>
