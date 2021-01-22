@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Route } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { createGame } from '../actions/createGame';
 import GameContainer from '../containers/GameContainer';
 
@@ -34,13 +35,10 @@ class GameForm extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
+    debugger
         this.props.createGame(this.state)
-        this.setState({
-            name: '',
-            color: ''
-        })
         // route to game on submit
-        // this.history.push('/games/new')
+        // this.props.history.push('/games/new')
     }
 
     render() {
@@ -66,4 +64,5 @@ class GameForm extends React.Component {
 
 
 
+// export default withRouter(GameForm)
 export default connect(null, {createGame})(GameForm)

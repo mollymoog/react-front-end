@@ -7,7 +7,8 @@ import Images from '../components/Images';
 class ImagesContainer extends React.Component {
 
     componentDidMount() {
-        this.props.fetchImages()
+        // send game id to fetchImages()
+        this.props.fetchImages(this.state.game.id)
     }
 
 
@@ -23,7 +24,8 @@ class ImagesContainer extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        images: state.images
+        images: state.images,
+        game: state.game.id
     }
 }
 

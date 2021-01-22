@@ -1,21 +1,13 @@
 import React from 'react';
-// import { StyleSheet } from 'react-native';
-
-// const styles = StyleSheet.create({
-//   container: {
-//     paddingTop: 50,
-//     width: 50,
-//     height: 200,
-//     resizeMode: 'fit',
-//   }
-// });
 
 const Images = (props) => {
     return (
+
         <div>
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></link>
             Images
             {props.images.map((image, index) => 
-                <img key={index} src={image.download_url} ></img>) }
+                <img class='w3-image w3-col s4 w3-border w3-padding' key={index} src={image.download_url} ></img>) }
         </div>
     )
 }
