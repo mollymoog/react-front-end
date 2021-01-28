@@ -7,14 +7,26 @@ import Images from '../components/Images';
 class ImagesContainer extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            seconds: 10
+        }
     }
 
     componentDidMount() {
-        debugger
-        // send game id to fetchImages()
-        let gameId = this.props.games[0].id
-        this.props.fetchImages(gameId)
+        this.timer = setInterval(() => {
+            if (this.state.seconds > 0) {
+                this.setState({
+                    seconds: this.state.seconds -1
+                })
+            } else {
+                let gameId = this.props.games[0].id
+                this.props.fetchImages(gameId)
+            }
+        }, 1000)
     }
+
+    // gameLoading = () => {
+    // }
 
 
     render() {
