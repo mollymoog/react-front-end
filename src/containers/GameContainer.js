@@ -1,16 +1,15 @@
-import React from 'react';
-import ImagesContainer from './ImagesContainer';
+// import React from 'react';
+// import ImagesContainer from './ImagesContainer';
 
-class GameContainer extends React.Component {
+// class GameContainer extends React.Component {
 
-    render() {
+//     render() {
+//         if (this.state.isSubmitted == true) {
+//             return (
+//                 < ImagesContainer />
+//             )
+//         }
+//     }
+// }
 
-        return (
-            <div>
-                <ImagesContainer />
-            </div>
-        )
-    }
-}
-
-export default GameContainer
+// export default GameContainer

@@ -1,5 +1,5 @@
 
-export function fetchImages(gameId) {
+export const fetchImages = (gameId) => {
     return (dispatch) => {
         fetch(`http://localhost:3000/games/${gameId}/images`)
         // /games/id/images
