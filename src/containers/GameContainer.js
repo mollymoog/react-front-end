@@ -1,15 +1,35 @@
-// import React from 'react';
-// import ImagesContainer from './ImagesContainer';
+import React from 'react';
+import ImagesContainer from './ImagesContainer';
+import GameForm from '../components/GameForm';
 
-// class GameContainer extends React.Component {
+class GameContainer extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            isSubmitted: false
+        }
+    }
 
-//     render() {
-//         if (this.state.isSubmitted == true) {
-//             return (
-//                 < ImagesContainer />
-//             )
-//         }
-//     }
-// }
+    handleSubmit = (isSubmitted) => {
+        this.setState({
+            isSubmitted: isSubmitted
+        })
+    }
 
-// export default GameContainer
+    render() {
+
+        if (this.state.isSubmitted == true) {
+            return (
+                //<TeamName & Color display
+                < ImagesContainer />
+                // <New Game Button
+            )
+        } else {
+            return (
+                <GameForm isSubmitted={this.handleSubmit}/>
+            )
+        }
+    }
+}
+
+export default GameContainer

@@ -1,15 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import GameForm from './components/GameForm'
 
 import './App.css';
+import GameContainer from './containers/GameContainer';
 
 class App extends React.Component {
 
   render() {
     return (
       <div className= "App">
-        <GameForm />
+        <GameContainer />
       </div>
     )
   }

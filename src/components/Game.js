@@ -1,16 +1,16 @@
-import React from 'react';
-import ImagesContainer from '../containers/ImagesContainer';
+// import React from 'react';
+// import ImagesContainer from '../containers/ImagesContainer';
 
-class Game extends React.Component {
+// class Game extends React.Component {
 
-    render() {
+//     render() {
 
-        return(
-            <div>
-                <ImagesContainer />
-            </div>
-        )
-    }
-}
+//         return(
+//             <div>
+//                 <ImagesContainer />
+//             </div>
+//         )
+//     }
+// }
 
-export default Game
+// export default Game
