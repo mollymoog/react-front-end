@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchImages } from '../actions/fetchImages'
 import Images from '../components/Images';
+import LoadPage from '../components/LoadPage';
 
 
 class ImagesContainer extends React.Component {
@@ -25,20 +26,22 @@ class ImagesContainer extends React.Component {
         }, 1000)
     }
 
-    // gameLoading = () => {
-    // }
-
-
     render() {
+
+        if (this.state.seconds > 0) {
+            return (
+                <LoadPage />
+            )
+        } else {
         
-        return (
-            <div>
-                ImagesContainer
-                <Images images={this.props.images}/>
-                {/*  */}
-            </div>
-        )
+            return (
+                <div>
+                    ImagesContainer
+                    <Images images={this.props.images}/>
+                </div>
+            )
         }
+    }
 }
 
 const mapStateToProps = state => {

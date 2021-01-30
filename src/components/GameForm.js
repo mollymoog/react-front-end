@@ -25,14 +25,15 @@ class GameForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="row ">
                 New Game:
-                <form onSubmit={this.handleSubmit}>
-                    <label>Team :</label>
+                <form className="center-align" onSubmit={this.handleSubmit}>
+                    <div className="input-field">
                         <input type='text' name='name' value={this.state.name} onChange={this.handleChange} placeholder='team name'></input>
-                        <input type='color' name='color' value={this.state.color} onChange={this.handleChange}></input>
+                        {/* <input type='color' name='color' value={this.state.color} onChange={this.handleChange}></input> */}
+                    </div>
                     <br></br>
-                    <button type="submit">Start Game</button>
+                    <button className="btn amber darken-4" type="submit">Start Game</button>
                 </form>
             </div>
         )

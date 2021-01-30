@@ -2,24 +2,23 @@ import React from 'react';
 
 const Images = (props) => {
 
-    const handleClick = (image, e) => {
-        return
+    const handleClick = (color, e) => {
+        console.log(color)
+        e.target.classList.add(`${color}`)
+        console.log(e.target.classList)
         // change background to team color
-(        <img src={image.url} style={{backgroundColor: image.color}}class="w3-image w3-col s4 w3-border-color: w3-padding"></img> 
-)    }
+    }
 
     return (
-        <div>
-        <div class="row">
-        <div class="col s12 m7">
-        <div class="card medium">
-        <div class="card-image">
+        <div className="row">
             {props.images.map((image, index) => 
-                <img key={index} src={image.url} onClick={(e) => handleClick(image, e)} class='w3-image w3-col s4 w3-border w3-padding'></img>) }
-        </div>
-        </div>
-        </div>
-        </div>
+                <div className="col s4">
+
+                <div className="card small" onClick={(e) => handleClick(image.color, e)}>
+                <img className="card-image" key={index} src={image.url} ></img>
+                </div>
+                </div>
+                ) }
         </div>
     )
 }
