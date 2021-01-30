@@ -36,7 +36,6 @@ class ImagesContainer extends React.Component {
         
             return (
                 <div>
-                    ImagesContainer
                     <Images images={this.props.images}/>
                 </div>
             )

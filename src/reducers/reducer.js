@@ -5,7 +5,6 @@ export default function reducer(state = {images: [], games: []}, action) {
         case 'FETCH_IMAGES':
             return {...state, images: action.payload}
         case 'CREATE_GAME':
-
             return {...state, games: [action.payload]}
         default:
             return state
