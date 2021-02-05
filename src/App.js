@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import './App.css';
+import GameForm from './components/GameForm';
 import Home from './components/Home';
 import Instructions from './components/Instructions';
 import NavBar from './components/NavBar';
@@ -17,7 +18,8 @@ class App extends React.Component {
       <div className= "container">
       <Switch>
         <Route exact path="/codepix" component={Home} />
-        <Route exact path="/game/new" component={GameContainer} />
+        {/* <Route exact path="/game/create" component={GameForm} /> */}
+        <Route exact path="/game" component={GameContainer} />
         <Route exact path="/instructions" component={Instructions} />
 
       </Switch>

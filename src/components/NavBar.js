@@ -7,14 +7,13 @@ export class NavBar extends Component {
     return (
       <nav className="light-green darken-3">
         <div className="container">
-          <NavLink to="/codepix" className="brand-logo">Home</NavLink>
+          <NavLink to="/codepix" className="center brand-logo">Home</NavLink>
           <ul className="right">
-            <li><NavLink to="/game/new">New Game</NavLink></li>
+            <li><NavLink to="/game">New Game</NavLink></li>
           </ul>
           <ul className="left">
             <li><NavLink to="/instructions">Instructions</NavLink></li>
           </ul>
-
         </div>
       </nav>
     )

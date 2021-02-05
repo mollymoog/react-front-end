@@ -18,11 +18,11 @@ class GameContainer extends React.Component {
 
     render() {
 
-        if (this.state.isSubmitted == true) {
+        if (this.state.isSubmitted === true) {
+            debugger
+
             return (
-                //<TeamName & Color display
                 < ImagesContainer />
-                // <New Game Button
             )
         } else {
             return (

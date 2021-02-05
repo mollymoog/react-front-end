@@ -1,17 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createGame } from '../actions/createGame';
+import GameContainer from '../containers/GameContainer';
 
 class GameForm extends React.Component {
 
-    state= {
-        name: '',
-        color: '',
-        isSubmitted: false
-    }
+    // constructor(props) {
+    //     super(props)
+        state= {
+            name: '',
+            color: '',
+            isSubmitted: false
+        }
+    // }
 
     handleChange = (event) => {
-
         this.setState({
             [event.target.name]: event.target.value
         })
@@ -33,7 +37,7 @@ class GameForm extends React.Component {
                         {/* <input type='color' name='color' value={this.state.color} onChange={this.handleChange}></input> */}
                     </div>
                     <br></br>
-                    <button className="btn amber darken-4" type="submit">Start Game</button>
+                    <button className="btn amber darken-4" type="submit"><Link to="/game/new" component={GameContainer} /></button>
                 </form>
             </div>
         )
@@ -41,3 +45,5 @@ class GameForm extends React.Component {
 }
 
 export default connect(null, {createGame})(GameForm)
+
+{/* <Link to="/game/new">Start Game</Link> */}

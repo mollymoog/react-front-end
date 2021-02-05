@@ -10,15 +10,18 @@ const Images = (props) => {
     }
 
     return (
+        <div >
         <div className="row">
             {props.images.map((image, index) => 
                 <div className="col s4">
-
                 <div className="card small" onClick={(e) => handleClick(image.color, e)}>
-                <img className="card-image" key={index} src={image.url} ></img>
+                    <div className="card-image">
+                    <img  key={index} src={image.url} ></img>
+                    </div>
                 </div>
                 </div>
                 ) }
+        </div>
         </div>
     )
 }

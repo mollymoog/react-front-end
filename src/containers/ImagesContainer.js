@@ -36,6 +36,7 @@ class ImagesContainer extends React.Component {
         
             return (
                 <div>
+                    {/* <button onClick={this.handleClick(this.props.images)} >decode</button> */}
                     <Images images={this.props.images}/>
                 </div>
             )
