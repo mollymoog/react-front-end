@@ -19,8 +19,6 @@ class GameContainer extends React.Component {
     render() {
 
         if (this.state.isSubmitted === true) {
-            debugger
-
             return (
                 < ImagesContainer />
             )

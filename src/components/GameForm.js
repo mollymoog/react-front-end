@@ -37,7 +37,7 @@ class GameForm extends React.Component {
                         {/* <input type='color' name='color' value={this.state.color} onChange={this.handleChange}></input> */}
                     </div>
                     <br></br>
-                    <button className="btn amber darken-4" type="submit"><Link to="/game/new" component={GameContainer} /></button>
+                    <button className="btn amber darken-4" type="submit">Submit</button>
                 </form>
             </div>
         )
